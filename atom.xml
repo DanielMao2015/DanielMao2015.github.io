@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>DanielMao&#39;s Blog</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-02-19T12:20:35.731Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>DanielMao</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Github+Hexo+Next搭建个人博客</title>
+    <link href="http://yoursite.com/2016/01/28/%E4%BD%BF%E7%94%A8Github-Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2016/01/28/使用Github-Hexo-Next搭建个人博客/</id>
+    <published>2016-01-28T13:40:00.000Z</published>
+    <updated>2016-02-19T12:20:35.731Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;配置开发环境&quot;&gt;&lt;a href=&quot;#配置开发环境&quot; class=&quot;headerlink&quot; title=&quot;配置开发环境&quot;&gt;&lt;/a&gt;配置开发环境&lt;/h1&gt;&lt;p&gt;依次下载安装：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/download/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://git-scm.com/download/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;注册Github新建个人项目&quot;&gt;&lt;a href=&quot;#注册Github新建个人项目&quot; class=&quot;headerlink&quot; title=&quot;注册Github新建个人项目&quot;&gt;&lt;/a&gt;注册Github新建个人项目&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;新建一个Repository，将Repository name改为yourname.github.io，然后点击Create repository&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在本地目标文件夹中右键选择Git Bash Here开始配置SSH-Key&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/.ssh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ssh-keygen -t rsa -C &lt;span class=&quot;string&quot;&gt;&quot;your e-mail&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ clip &amp;lt; ~/.ssh/id_rsa.pub&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;然后将其添加到Github的Settings-SSH keys中，之后就可以暂时关掉Github的网页了&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;通过Hexo框架部署网站&quot;&gt;&lt;a href=&quot;#通过Hexo框架部署网站&quot; class=&quot;headerlink&quot; title=&quot;通过Hexo框架部署网站&quot;&gt;&lt;/a&gt;通过Hexo框架部署网站&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;使用 git clone git@github.com:cyliuu/cyliuu.github.io.git 拷贝Repository到本地，然后在克隆后的本地文件夹内右键选择Git Bash Here开始初始化Hexo框架&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ npm install&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-deployer-git --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将_config.yml中倒数第二行的repo替换成你的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;做完以上的步骤，你的博客其实已经搭建好了，你只需要把一些个人信息替换掉就行了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;更换Next主题&quot;&gt;&lt;a href=&quot;#更换Next主题&quot; class=&quot;headerlink&quot; title=&quot;更换Next主题&quot;&gt;&lt;/a&gt;更换Next主题&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;由于我的模版里已经帮你下载好了，所以你的主要操作就是将theme/next/_config.yml中的个人信息替换成你的就行了&lt;/li&gt;
+&lt;li&gt;你可以像我一样引入多说评论接口，便于和网友们交流&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;接着再开启RSS订阅&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-feed --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;然后是生成本地网页&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;通过 &lt;a href=&quot;http://localhost:4000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000&lt;/a&gt; 本地接口访问网页，如果没有问题就可以发布了&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;使用Git上传和发布项目&quot;&gt;&lt;a href=&quot;#使用Git上传和发布项目&quot; class=&quot;headerlink&quot; title=&quot;使用Git上传和发布项目&quot;&gt;&lt;/a&gt;使用Git上传和发布项目&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;上传项目到缓存区&lt;br&gt;在本地文件夹内右键选择Git Bash Here，依次执行：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;# yourname.github.io&quot;&lt;/span&gt; &amp;gt;&amp;gt; README.md&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git init&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git add .&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git commit -m &lt;span class=&quot;string&quot;&gt;&quot;initial commit&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git remote add origin https://github.com/yourname/yourname.github.io.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;新建分支，将项目由缓存区上传到Github中&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git branch hexo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git checkout hexo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git push -u origin hexo&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;部署网站&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;现在你可以通过 &lt;a href=&quot;http://yourname.github.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://yourname.github.io/&lt;/a&gt; 访问你的个人博客了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;日常管理&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git add .&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git commit -m &lt;span class=&quot;string&quot;&gt;&quot;...&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git push origin hexo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate --deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;本地数据丢失&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git &lt;span class=&quot;built_in&quot;&gt;clone&lt;/span&gt; git@github.com:yourname/yourname.github.io.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ npm install&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-deployer-git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-generator-feed&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub Pages + Hexo搭建博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://moyatao.github.io/2015/11/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%EF%BC%9AGitHub-Hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/#more&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;我的第一篇博客：GitHub+Hexo搭建博客过程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://theme-next.iissnan.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Next主题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;配置开发环境&quot;&gt;&lt;a href=&quot;#配置开发环境&quot; class=&quot;headerlink&quot; title=&quot;配置开发环境&quot;&gt;&lt;/a&gt;配置开发环境&lt;/h1&gt;&lt;p&gt;依次下载安装：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/do
+    
+    </summary>
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
+    
+  </entry>
+  
+</feed>
